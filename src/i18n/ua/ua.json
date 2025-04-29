@@ -1,3 +1,24 @@
 {
-
+  "checkout": "Оформлення замовлення",
+  "free-trial": "5 днів безкоштовно",
+  "price": "потім 299.99 ГРН кожні 14 днів",
+  "pay-with-card": "або сплатіть карткою",
+  "card-number": "Номер картки",
+  "expiration-date": "Термін дії",
+  "cvc": "CVC",
+  "start-trial": "Почати пробний період",
+  "payment-processing": "Обробка платежу",
+  "plan-pro": "Ви отримаєте <span class='font-semibold text-[12px] leading-[calc(16/12)]'>Plan Pro на 1 рік.</span> Після цього періоду ваш план буде <span class='font-semibold text-[12px] leading-[calc(16/12)]'>автоматично поновлено</span> за його початковою ціною без застосування знижок.",
+  "order-info": "Інформація <= 100 символів",
+  "description": "Опис <= 400 символів",
+  "monthly-price": "299.99 ГРН <0>/</0> <1>місяць</1>",
+  "cardNumber-required": "Це поле обов'язкове",
+  "cardNumber-min": "Це поле повинно містити не менше 16 цифр",
+  "cardNumber-matches": "Це поле може містити лише цифри",
+  "expiration-required": "Це поле обов'язкове",
+  "expiration-matches": "Неправильний формат дати",
+  "cvc-required": "Це поле обов'язкове",
+  "cvc-min": "Це поле повинно містити не менше 3 цифр",
+  "cvc-matches": "Це поле може містити лише цифри",
+  "current-language": "Укр"
 }

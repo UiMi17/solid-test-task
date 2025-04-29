@@ -1,16 +1,25 @@
+import {useTranslation} from "react-i18next";
 import {useForm} from "react-hook-form";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {yupResolver} from "@hookform/resolvers/yup";
+import i18n from "i18next";
+import LoaderIcon from "../../icons/LoaderIcon.tsx";
 import SubtractIcon from "../../icons/SubtractIcon.tsx";
 import cardPaymentFormSchema from "../CardPaymentFormSchema.ts";
-import LoaderIcon from "../../icons/LoaderIcon.tsx";
 
 const CardPaymentForm = () => {
+    const {t} = useTranslation();
     const [loading, setLoading] = useState(false);
-    const {register, handleSubmit, formState: {errors}} = useForm({
+    const {register, handleSubmit, formState: {errors}, reset} = useForm({
         resolver: yupResolver(cardPaymentFormSchema)
     });
+
+    useEffect(() => {
+        i18n.on('languageChanged', () => {
+            reset({}, { keepValues: false });
+        });
+    }, [reset]);
 
     const mockPayment = (data: any): Promise<void> => {
         return new Promise((resolve, reject) => {
@@ -46,7 +55,7 @@ const CardPaymentForm = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto">
             <label className="block mb-0">
-                <span className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">Card Number</span>
+                <span className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">{t('card-number')}</span>
                 <input
                     type="text"
                     {...register("cardNumber")}
@@ -64,7 +73,7 @@ const CardPaymentForm = () => {
             <div className="flex gap-4 m-0 mt-3">
                 <label className="flex flex-col">
                     <span
-                        className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">Expiration Date</span>
+                        className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">{t('expiration-date')}</span>
                     <input
                         type="text"
                         {...register("expiration")}
@@ -79,7 +88,7 @@ const CardPaymentForm = () => {
                 </label>
 
                 <label className="flex flex-col relative">
-                    <span className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">CVC</span>
+                    <span className="font-medium text-[12px] leading-[calc(16/12)] text-secondary">{t('cvc')}</span>
                     <input
                         type="password"
                         {...register("cvc")}
@@ -108,10 +117,10 @@ const CardPaymentForm = () => {
                 {loading ? (
                     <>
                         <LoaderIcon className='animate-spin mr-3'/>
-                        Processing payment
+                        {t('payment-processing')}
                     </>
                 ) : (
-                    "Start Trial"
+                    t('start-trial')
                 )}
             </button>
         </form>

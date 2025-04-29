@@ -1,3 +1,24 @@
 {
-
+  "checkout": "Checkout",
+  "free-trial": "5 days free",
+  "price": "then 299.99 UAH per 14 days",
+  "pay-with-card": "or pay with card",
+  "card-number": "Card Number",
+  "expiration-date": "Expiration Date",
+  "cvc": "CVC",
+  "start-trial": "Start Trial",
+  "payment-processing": "Processing payment",
+  "plan-pro": "You'll have your <span class='font-semibold text-[12px] leading-[calc(16/12)]'>Plan Pro during 1 year.</span> After this period of time, your plan will be <span class='font-semibold text-[12px] leading-[calc(16/12)]'>automatically renewed</span> with its original price without any discounts applied.",
+  "order-info": "Order info <= 100 char.",
+  "description": "Description <= 400 char.",
+  "monthly-price": "299.99 UAH <0>/</0> <1>month</1>",
+  "cardNumber-required": "This field is required",
+  "cardNumber-min": "This field must contain not less than 16 numbers",
+  "cardNumber-matches": "This field can only contain numbers",
+  "expiration-matches": "Wrong date format",
+  "expiration-required": "This field is required",
+  "cvc-required": "This field is required",
+  "cvc-min": "This field must contain not less than 3 numbers",
+  "cvc-matches": "This field can only contain numbers",
+  "current-language": "Eng"
 }

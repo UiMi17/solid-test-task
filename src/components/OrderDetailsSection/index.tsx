@@ -1,10 +1,12 @@
+import {Trans, useTranslation} from "react-i18next";
 import Separator from "../shared/ui/Separator.tsx";
 
 const OrderDetailsSection = () => {
+    const {t } = useTranslation();
+
     return <section className='mt-8 w-full py-3 px-4 bg-tertiary rounded-lg'>
-        <p className='font-semibold text-lg leading-[calc(24/18)] text-primary'>Order info &lt;&#61; 100 char.</p>
-        <p className='block mt-4 font-medium text-sm leading-[calc(24/14)] text-primary'>Description &lt;&#61; 400
-            char.</p>
+        <p className='font-semibold text-lg leading-[calc(24/18)] text-primary'>{t('order-info')}</p>
+        <p className='block mt-4 font-medium text-sm leading-[calc(24/14)] text-primary'>{t('description')}</p>
         <div className='w-full mt-4'>
             <Separator/>
         </div>
@@ -14,7 +16,10 @@ const OrderDetailsSection = () => {
         <div className='w-full mt-4'>
             <Separator/>
         </div>
-        <p className='mt-4 text-right font-semibold text-primary'>299.99 UAH <span className='font-medium'>/</span> <span className='text-sm leading-[calc(24/14)]'>month</span></p>
+        <p className='mt-4 text-right font-semibold text-primary'><Trans i18nKey='monthly-price'  components={{
+            0: <span className="font-medium" />,
+            1: <span className="text-sm leading-[calc(24/14)]" />
+        }}/></p>
     </section>
 }
 
