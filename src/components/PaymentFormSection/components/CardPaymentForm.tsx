@@ -4,6 +4,7 @@ import {toast} from "react-toastify";
 import {yupResolver} from "@hookform/resolvers/yup";
 import SubtractIcon from "../../icons/SubtractIcon.tsx";
 import cardPaymentFormSchema from "../CardPaymentFormSchema.ts";
+import LoaderIcon from "../../icons/LoaderIcon.tsx";
 
 const CardPaymentForm = () => {
     const [loading, setLoading] = useState(false);
@@ -100,11 +101,18 @@ const CardPaymentForm = () => {
             <button
                 type="submit"
                 disabled={loading}
-                className={`flex justify-center items-center w-full h-12 mt-4 rounded-md font-semibold text-white ${
-                    loading ? "bg-gray-400 cursor-not-allowed" : "bg-focus-primary"
-                }`}
+                className={`flex justify-center items-center w-full h-12 mt-4 rounded-md font-semibold text-white 
+                ${loading ? "cursor-not-allowed bg-focus-fade" : "bg-focus-primary hover:bg-focus-fade active:bg-focus-secondary active:translate-y-[6px]"} 
+                transition-all duration-200`}
             >
-                {loading ? "Processing..." : "Start Trial"}
+                {loading ? (
+                    <>
+                        <LoaderIcon className='animate-spin mr-3'/>
+                        Processing payment
+                    </>
+                ) : (
+                    "Start Trial"
+                )}
             </button>
         </form>
     );
