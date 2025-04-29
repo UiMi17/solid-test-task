@@ -4,7 +4,7 @@ import translationEN from './en/en.json';
 import translationUA from './ua/ua.json';
 
 i18next.use(initReactI18next).init({
-    lng: 'en',
+    lng: localStorage.getItem('language') || 'en',
     debug: true,
     resources: {
         en: {

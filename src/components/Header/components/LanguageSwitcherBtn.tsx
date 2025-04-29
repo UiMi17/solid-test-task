@@ -7,8 +7,10 @@ const LanguageSwitcherBtn = () => {
     const handleLanguageChange = useCallback(() => {
         if (i18n.language === 'en') {
             i18n.changeLanguage('ua');
+            localStorage.setItem('language', 'ua');
         } else {
             i18n.changeLanguage('en');
+            localStorage.setItem('language', 'en');
         }
     }, [i18n]);
 
