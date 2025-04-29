@@ -41,10 +41,10 @@ const CardPaymentForm = () => {
 
             // throw new Error("Test server error");
 
-            toast.success("Payment successfully created! 🎉");
+            toast.success(t('payment-success'));
             console.log("CardPaymentForm Data:", data);
         } catch (error: any) {
-            const message = error?.message || "Oops. Something went wrong on our side.";
+            const message = error?.message || t('payment-error');
             toast.error(message);
             console.error("CardPaymentForm error:", error);
         } finally {
