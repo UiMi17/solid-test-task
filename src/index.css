@@ -4,12 +4,15 @@
     --breakpoint-tablet: 452px;
     --breakpoint-desktop: 1000px;
 
+
     --color-primary: #363A43;
     --color-secondary: #666C7B;
     --color-focus-primary: #028837;
 
     --color-border-primary: #E4E6EC;
     --color-border-secondary: #C7C9D1;
+
+    --color-error: #FF1F00;
 }
 
 #root {
