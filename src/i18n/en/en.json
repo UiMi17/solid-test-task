@@ -20,7 +20,7 @@
   "cvc-required": "This field is required",
   "cvc-min": "This field must contain not less than 3 numbers",
   "cvc-matches": "This field can only contain numbers",
-  "current-language": "Eng",
+  "current-language": "Укр",
   "payment-success": "Payment successfully created! \uD83C\uDF89",
   "payment-error": "Oops. Something went wrong on our side."
 }

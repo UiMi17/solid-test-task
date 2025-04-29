@@ -20,7 +20,7 @@
   "cvc-required": "Це поле обов'язкове",
   "cvc-min": "Це поле повинно містити не менше 3 цифр",
   "cvc-matches": "Це поле може містити лише цифри",
-  "current-language": "Укр",
+  "current-language": "Eng",
   "payment-success": "Платіж успішно сформований! \uD83C\uDF89",
   "payment-error": "Упс-с. Щось пішло не так."
 }
