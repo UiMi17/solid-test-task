@@ -6,7 +6,7 @@ const BackBtn = () => {
         console.log("Back button clicked.");
     }
 
-    return <button onClick={handleBackBtnClick} className='flex justify-center items-center w-10 h-10'>
+    return <button onClick={handleBackBtnClick} className='flex justify-center items-center w-6 h-6'>
         <ArrowLeftIcon/>
     </button>
 }
