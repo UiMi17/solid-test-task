@@ -7,6 +7,7 @@
 
     --color-primary: #363A43;
     --color-secondary: #666C7B;
+    --color-tertiary: #F7F7F9;
 
     --color-focus-primary: #028837;
     --color-focus-secondary: #02742F;
@@ -14,6 +15,7 @@
 
     --color-border-primary: #E4E6EC;
     --color-border-secondary: #C7C9D1;
+    --color-border-tertiary: #E0E2EA;
 
     --color-error: #FF1F00;
 }

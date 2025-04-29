@@ -1,13 +1,13 @@
 interface ISeparatorWithTextProps {
-    text: string;
+    text?: string;
 }
 
-const SeparatorWithText = ({text}: ISeparatorWithTextProps) => {
-    return <div className="flex items-center">
+const Separator = ({text}: ISeparatorWithTextProps) => {
+    return text ? <div className="flex items-center">
         <div className="flex-grow border border-border-primary"/>
         <span className="mx-4 text-sm leading-[calc(24/14)] text-secondary">{text}</span>
         <div className="flex-grow border border-border-primary"/>
-    </div>
+    </div> : <div className="flex-grow border border-border-tertiary"/>
 }
 
-export default SeparatorWithText;
+export default Separator;
