@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# Solid Test Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проєкт реалізує спрощену сторінку оплати згідно з тестовим завданням. Він створений з використанням **React** та націлений на точне відтворення заданого дизайну, а також реалізацію базової форми оплати з клієнтською валідацією.
 
-Currently, two official plugins are available:
+## 🔗 Посилання
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 [Макет у Figma](https://www.figma.com/file/WuqFxnT1z0od3XRFiz6yBx/Your-test-is-here-%3B)
+- 💻 [Демо-версія](https://solid-test-task.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🚀 Технології
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ **React 19** – основний фреймворк для побудови UI
+- 🎨 **Tailwind CSS 4** – утилітарна CSS-бібліотека для стилізації
+- 🧪 **Vite 6** – інструмент для збірки та локального запуску
+- ✍️ **TypeScript 5** – забезпечує статичну типізацію
+- ✅ **React Hook Form** + **Yup** – для керування формою та валідації
+- 🌍 **i18next + react-i18next** – базова підтримка інтернаціоналізації
+- 🔔 **React Toastify** – для показу повідомлень про успіх чи помилки
+- 🧹 **ESLint** + **typescript-eslint** – для підтримки якості коду
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## 🧪 Інструкції з запуску
+
+```bash
+git clone https://github.com/UiMi17/solid-test-task.git
+cd solid-test-task
+npm install
+npm run dev
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+або
+```bash
+git clone https://github.com/UiMi17/solid-test-task.git
+cd solid-test-task
+yarn install
+yarn dev
 ```
