@@ -11,9 +11,9 @@ function App() {
     const {t} = useTranslation();
 
   return (
-    <div className='w-full h-full'>
-      <Container>
+    <div className='flex flex-col items-center w-full h-full'>
         <Header/>
+        <Container>
           <PaymentSection/>
           <div className='w-full pt-6'>
               <Separator text={t('pay-with-card')}/>
