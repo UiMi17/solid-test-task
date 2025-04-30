@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --breakpoint-tablet: 452px;
     --breakpoint-desktop: 1000px;
-
 
     --color-primary: #363A43;
     --color-secondary: #666C7B;
@@ -20,11 +18,10 @@
     --color-error: #FF1F00;
 }
 
-#root {
-    width: 100dvw;
-    height: 100dvh;
-}
-
 body {
     font-family: Inter, sans-serif;
+}
+
+button {
+    cursor: pointer;
 }

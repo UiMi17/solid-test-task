@@ -4,9 +4,9 @@ import Separator from "../shared/ui/Separator.tsx";
 const OrderDetailsSection = () => {
     const {t } = useTranslation();
 
-    return <section className='mt-8 w-full py-3 px-4 bg-tertiary rounded-lg'>
+    return <section className='mt-8 w-full py-3 px-4 bg-tertiary rounded-lg desktop:mt-0 desktop:max-h-[274px] desktop:p-8 desktop:pb-10'>
         <p className='font-semibold text-lg leading-[calc(24/18)] text-primary'>{t('order-info')}</p>
-        <p className='block mt-4 font-medium text-sm leading-[calc(24/14)] text-primary'>{t('description')}</p>
+        <p className='block mt-4 font-medium text-sm leading-[calc(24/14)] text-primary desktop:mt-6'>{t('description')}</p>
         <div className='w-full mt-4'>
             <Separator/>
         </div>
