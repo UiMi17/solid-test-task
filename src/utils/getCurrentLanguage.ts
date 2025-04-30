@@ -1,5 +1,5 @@
 const getCurrentLanguage = () => {
-    return localStorage.getItem("language") || 'en';
-}
+  return localStorage.getItem('language') || 'en';
+};
 
 export default getCurrentLanguage;
