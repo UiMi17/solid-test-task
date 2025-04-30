@@ -7,6 +7,7 @@ import i18n from 'i18next';
 import LoaderIcon from '../../icons/LoaderIcon.tsx';
 import SubtractIcon from '../../icons/SubtractIcon.tsx';
 import cardPaymentFormSchema from '../CardPaymentFormSchema.ts';
+import {CardPaymentFormValues} from "../../../constants";
 
 const CardPaymentForm = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const CardPaymentForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<CardPaymentFormValues>({
     resolver: yupResolver(cardPaymentFormSchema),
   });
 
@@ -26,7 +27,7 @@ const CardPaymentForm = () => {
     });
   }, [reset]);
 
-  const mockPayment = (data: any): Promise<void> => {
+  const mockPayment = (data: CardPaymentFormValues): Promise<void> => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         //TODO: Testing CardPaymentForm server error response
@@ -39,7 +40,7 @@ const CardPaymentForm = () => {
     });
   };
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: CardPaymentFormValues) => {
     setLoading(true);
     try {
       await mockPayment(data);
@@ -48,9 +49,11 @@ const CardPaymentForm = () => {
 
       toast.success(t('payment-success'));
       console.log('CardPaymentForm Data:', data);
-    } catch (error: any) {
-      const message = error?.message || t('payment-error');
-      toast.error(message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        const message = error?.message || t('payment-error');
+        toast.error(message);
+      }
       console.error('CardPaymentForm error:', error);
     } finally {
       setLoading(false);

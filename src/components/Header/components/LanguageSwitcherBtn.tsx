@@ -1,7 +1,8 @@
-import { useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
+import {useCallback} from 'react';
+import {useTranslation} from 'react-i18next';
 import useIsDesktop from '../../../hooks/useIsDesktop.ts';
 import getCurrentLanguage from '../../../utils/getCurrentLanguage.ts';
+import {UserLanguage} from "../../../constants";
 
 const LanguageSwitcherBtn = () => {
   const { t, i18n } = useTranslation();
@@ -9,7 +10,7 @@ const LanguageSwitcherBtn = () => {
   const currentLanguage = getCurrentLanguage();
 
   const handleLanguageChange = useCallback(
-    (language: any) => {
+    (language?: UserLanguage) => {
       if (language) {
         i18n.changeLanguage(language);
         localStorage.setItem('language', language);
@@ -27,19 +28,19 @@ const LanguageSwitcherBtn = () => {
   );
 
   return !isDesktop ? (
-    <button onClick={handleLanguageChange} className="font-medium text-sm leading-[calc(24/14)] text-primary">
+    <button onClick={() => handleLanguageChange()} className="font-medium text-sm leading-[calc(24/14)] text-primary">
       {t('current-language')}
     </button>
   ) : (
     <div className="flex gap-4 pr-2 font-medium text-sm leading-[calc(24/14)] text-primary">
       <button
-        onClick={() => handleLanguageChange('en')}
+        onClick={() => handleLanguageChange(UserLanguage.EN)}
         className={`w-6 h-6 ${currentLanguage === 'en' ? 'text-[#B0B4BE]' : ''}`}
       >
         Eng
       </button>
       <button
-        onClick={() => handleLanguageChange('ua')}
+        onClick={() => handleLanguageChange(UserLanguage.UA)}
         className={`w-6 h-6 ${currentLanguage === 'ua' ? 'text-[#B0B4BE]' : ''}`}
       >
         Укр

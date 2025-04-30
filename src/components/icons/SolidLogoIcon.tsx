@@ -1,4 +1,6 @@
-const SolidLogoIcon = ({ width = 37, height = 20 }: any) => {
+import {IIconComponentProps} from "../../constants";
+
+const SolidLogoIcon = ({ width = 37, height = 20 }: IIconComponentProps) => {
   return (
     <svg width={width} height={height} viewBox="0 0 37 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

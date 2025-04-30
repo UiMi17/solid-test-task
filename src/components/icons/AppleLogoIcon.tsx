@@ -1,4 +1,6 @@
-const AppleLogoIcon = ({ width = 50, height = 20 }: any) => {
+import {IIconComponentProps} from "../../constants";
+
+const AppleLogoIcon = ({ width = 50, height = 20 }: IIconComponentProps) => {
   return (
     <svg width={width} height={height} viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_5212_766)">

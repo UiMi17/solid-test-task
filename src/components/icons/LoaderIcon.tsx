@@ -1,4 +1,6 @@
-const LoaderIcon = ({ width = 18, height = 18, className }: any) => {
+import {IIconComponentProps} from "../../constants";
+
+const LoaderIcon = ({ width = 18, height = 18, className }: IIconComponentProps) => {
   return (
     <svg
       width={width}
